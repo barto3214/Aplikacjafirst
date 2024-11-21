@@ -1,0 +1,31 @@
+﻿<Window x:Class="Aplikacjafirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacjafirst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBox x:Name="wpisywanytekst"
+                 FontFamily="Verdana"
+                 FontSize="24"
+                 Margin="20"
+                 Padding="10"
+                 Foreground="CadetBlue"></TextBox>
+        
+        <TextBlock Text="{Binding ElementName=wpisywanyteksthd,Path=Text}"
+                   Margin="20"
+                   Padding="10"></TextBlock>
+        <TextBlock Text="{Binding ElementName=wpisywanytekst,Path=Text.Length}"></TextBlock>
+        <Label Content="{Binding Powitanie}"
+               x:Name="powitanie"
+               ></Label>
+        <Button Click="Button_Click">Zmien napis</Button>
+        <TextBlock>Podaj pierwsza liczbę</TextBlock>
+        <TextBox x:Name="Liczba1"></TextBox>
+        <TextBlock>Podaj drugą liczbę</TextBlock>
+        <TextBox x:Name="Liczba2"></TextBox>
+        <Button Click="Button_Click_1">Oblicz sumę</Button>
+    </StackPanel>
+</Window>
